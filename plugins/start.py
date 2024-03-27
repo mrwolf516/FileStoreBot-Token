@@ -153,34 +153,7 @@ async def start_command(client: Client, message: Message):
                 ]
                 await message.reply(f"Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 24 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ !\n\nआप verified नहीं हैं !\nकृपया जारी रखने के लिए verify करें ताकि आप अब से 24 घंटे तक unlimited फिल्मों  प्राप्त कर सकें", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
-                if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
-                await z.delete()
-        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
-            poster = pic.replace('.jpg', "._V1_UX360.jpg")
-
-            m = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
-            if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
-                await m.delete()
-                                          
-        except Exception as e:
-            logger.exception(e)
-            n = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
-                await n.delete()         
-    else:
-        p = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(250)
-        await p.delete()
-        if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
-            await p.delete()
-    if spoll:
-        await msg.message.delete()
-        
+                
 # ... (rest of the code remains unchanged))
 
 
