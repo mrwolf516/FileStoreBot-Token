@@ -9,7 +9,7 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, SELF_DELETE
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, SELF_DELETE, SELF_DELETE_SECONDS
 
 class Bot(Client):
     def __init__(self):
@@ -22,7 +22,8 @@ class Bot(Client):
             },
             workers=TG_BOT_WORKERS,
             bot_token=TG_BOT_TOKEN,
-            self_delete=SELF_DELETE
+            self_delete=SELF_DELETE,
+            self_delete_seconds=SELF_DELETE_SECONDS
         )
         self.LOGGER = LOGGER
 
