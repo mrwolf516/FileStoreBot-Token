@@ -28,11 +28,11 @@ OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = ""
-DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
+DB_URI = "mongodb://Gopalmanda:Gopalmanda@ac-2b0g5fb-shard-00-00.riafvg2.mongodb.net:27017,ac-2b0g5fb-shard-00-01.riafvg2.mongodb.net:27017,ac-2b0g5fb-shard-00-02.riafvg2.mongodb.net:27017/?ssl=true&replicaSet=atlas-6kjqgp-shard-0&authSource=admin&retryWrites=true&w=majority"
+DB_NAME = os.environ.get("DATABASE_NAME", "Gopalmanda")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "easysky.in")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "3db7e7ae3d6b41b3661732556cccdffb8640777a")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","")
