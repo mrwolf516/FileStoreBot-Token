@@ -122,8 +122,8 @@ async def start_command(client: Client, message: Message):
 
         elif verify_status['is_verified']:
             reply_markup = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("🌐 Support Channel", url="https://t.me/MrWolfMovie")],
-                  [InlineKeyboardButton("⭐ Contact MrWolf", url="@MrWolfMovieRequestbot")]]
+                [[InlineKeyboardButton("🌐 Support Channel", url="https://t.me/MrWolfMovie"),
+                  InlineKeyboardButton("⭐ Contact MrWolf", url="@MrWolfMovieRequestbot")]]
             )
             await message.reply_text(
                 text=START_MSG.format(
