@@ -33,7 +33,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Gopalmanda")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "easysky.in")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "3db7e7ae3d6b41b3661732556cccdffb8640777a")
-VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
+VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 57600)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","")
 
